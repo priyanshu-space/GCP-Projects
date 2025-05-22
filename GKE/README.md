@@ -140,9 +140,10 @@ GCP Services Used :
 
 **2. *Service Account* :** Special Google Cloud identity **(non-human or robot entity)** used by application, virtual machines, containers or other **GCP services to authenticate and interact with Google Cloud APIs** without human intervention.
 
-    * User-managed : Created and managed manually by user, roles assigned and SA impersonation controlled by user.
-        
-        * Use for : GKE workload Identity, CI/CD pipelines and Automaton scripts.
+
+* User-managed : Created and managed manually by user, roles assigned and SA impersonation controlled by user.
+
+    * Use for : GKE workload Identity, CI/CD pipelines and Automaton scripts.
 
     * Google-managed : GCP auto-creates these for internal service use. User don't have any control on this. 
 
@@ -152,9 +153,10 @@ GCP Services Used :
 
         * Use : When you don't specify an SA for GCE VMs, App Engine, Cloud Functions.
 
+
 **3. *Workload Identity* :** It Allows k8s workload (pods) in GKE to securely access Google Cloud services (like GCS, BigQuery, PUB/SUB, etc.) without needing to manage the  service account keys manually.
 
-    * *Traditionally (without WI)* : If your pod need access to GCP Services, you would download a SA key JSON file. Mount it into the pod and use it to authenticate.
+* *Traditionally (without WI)* : If your pod need access to GCP Services, you would download a SA key JSON file. Mount it into the pod and use it to authenticate.
 
     * *What problem does it resolve* : Prevent keys from being accidentally exposed (as you don't have to download SA keys).
 
